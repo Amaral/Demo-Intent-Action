@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="br.com.fiap.mob.cadastropessoa.CadastroPessoaFisicaActivity"
+    android:id="@+id/conteiner">
+
+    <TextView
+        android:id="@+id/tvNome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_nome" />
+
+    <EditText
+        android:id="@+id/etNome"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNome" />
+
+    <TextView
+        android:id="@+id/tvCpf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/etNome"
+        android:text="@string/label_cpf" />
+
+    <EditText
+        android:id="@+id/etCpf"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCpf"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/tvTelefone"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/etCpf"
+        android:text="Telefone" />
+
+    <EditText
+        android:id="@+id/etTelefone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/tvTelefone"
+        android:layout_toLeftOf="@+id/btnTelefone"
+        android:inputType="phone" />
+
+    <Button
+        android:id="@+id/btnTelefone"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:layout_alignBottom="@+id/etTelefone"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvTelefone"
+        android:onClick="telefonar"
+        />
+
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/etTelefone"
+        android:text="@string/label_email" />
+
+
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/etTelefone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/etTelefone"
+        android:layout_below="@+id/tvEmail"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/btnEmail"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/sym_action_email"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/etEmail"
+        android:layout_below="@+id/tvEmail"
+        android:onClick="enviarEmail"/>
+
+
+    <TextView
+        android:id="@+id/tvSite"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_site"
+        android:layout_below="@+id/btnEmail"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etSite"
+        android:layout_below="@+id/tvSite"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/button"
+        android:layout_toStartOf="@+id/button" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/ic_menu_search"
+        android:layout_alignBottom="@+id/etSite"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/tvSite"
+        android:onClick="acessarSite"
+        />
+
+
+</RelativeLayout>
